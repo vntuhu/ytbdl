@@ -1,5 +1,5 @@
 url=$1
-echo "Please choose"
+echo "if download speed is slow please exit and re-download"
 echo "1) Audio-only (m4a)"
 echo "2) Audio-only (mp3)"
 echo "3) Best MVideo (mp4,mkv)"
@@ -7,13 +7,14 @@ echo "4) Best MVideo (mp4)"
 echo "5) MVideo (mp4) ≤1080p"
 echo "6) MVideo (mp4) ≤720p"
 echo "7) Best Audio-only (m4a,webm)"
+echo "8) Thank to VNTuhu"
 read CHOICE
 case $CHOICE in
 1)
 youtube-dl -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url
 ;;
 2)
-youtube-dl -x --audio-format mp3 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s $url
+youtube-dl -x --audio-format mp3 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url
 ;;
 3)
 youtube-dl -f 'bestvideo+bestaudio/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url
@@ -29,5 +30,8 @@ youtube-dl -f 'bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best' -o "/dat
 ;;
 7)
 youtube-dl -f bestaudio -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url
+;;
+8)
+exit
 ;;
 esac
