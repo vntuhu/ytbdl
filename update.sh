@@ -17,10 +17,10 @@ echo "e) Best Audio-only (m4a,webm)"
 read CHOICE
 case $CHOICE in
 1)
-youtube-dl -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url
+youtube-dl -f 'bestaudio[ext=m4a]' -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url
 ;;
 2)
-youtube-dl -x --audio-format mp3 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s $url
+youtube-dl -x --audio-format mp3 -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s $url
 ;;
 3)
 youtube-dl -f 'bestvideo+bestaudio/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url
@@ -56,7 +56,7 @@ d)
 youtube-dl -f 'bestvideo[height<=720]+bestaudio/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url
 ;;
 e)
-youtube-dl -f bestaudio -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url
+youtube-dl -f 'bestaudio' -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url
 ;;
 esac' > ~/bin/termux-url-opener
 
