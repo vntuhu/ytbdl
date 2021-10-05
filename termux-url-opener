@@ -1,0 +1,17 @@
+url=$1
+echo "Please choose"
+echo "1) Audio-only (m4a)"
+echo "2) Audio-only (mp3)"
+echo "3) Video (Highest)"               
+read CHOICE
+case $CHOICE in
+1)
+youtube-dl -f 140 -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url
+;;
+2)
+youtube-dl -x --audio-format mp3 $url
+;;
+3)
+youtube-dl $url
+;;
+esac
