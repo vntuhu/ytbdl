@@ -1,1 +1,1 @@
---no-mtime -o /data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s -f "bestvideo[height<=1440][ext=mp4]+bestaudio[ext=m4a]"
+--no-mtime -o /data/data/com.termux/files/home/storage/shared/Movies/vntuhu%(title)s.%(ext)s -f "worstvideo+bestaudio"
