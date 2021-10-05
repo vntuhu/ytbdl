@@ -32,7 +32,7 @@ echo -e $R"  |_|\___/ \__,_|\__|\__,_|_.__/ \___|____/|_____|" $N
 
 sleep 1.5
 
-echo -e $Y $L"YouTube-dl Installer By"  $R "Shuk" $N
+echo -e $Y $L"YouTube-dl Installer By"  $R "VNTuhu" $N
 
 echo -e $Y $L"Installing python..." $N
 
@@ -66,14 +66,14 @@ echo -e $Y $L "Creating youtube-dl config..." $N
 sleep 1.5
 
 echo -e $Y $L "Getting config file..." $N
-		wget https://raw.githubusercontent.com/shukryshuk/androidydl/master/config -P /data/data/com.termux/files/home/.config/youtube-dl
+		wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/com.termux/files/home/.config/youtube-dl
 
 echo -e $Y $L "Creating bin folder..." $N
 		mkdir ~/bin
 sleep 1.5
 
 echo -e $Y $L "Getting files..." $N
-		wget https://raw.githubusercontent.com/shukryshuk/androidydl/master/termux-url-opener -P /data/data/com.termux/files/home/bin
+		wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/termux-url-opener -P /data/data/com.termux/files/home/bin
 		clear
 		
 echo -e $Y $L "Finishing configuration..." $N
