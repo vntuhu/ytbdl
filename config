@@ -1,1 +1,1 @@
---no-mtime -o /data/data/com.termux/files/home/storage/shared/Movies/vntuhu%(title)s.%(ext)s -f "worstvideo+bestaudio"
+echo '--no-mtime -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s -f "bestvideo[height<=144][ext=mp4]+bestaudio"' > ~/.config/youtube-dl/config
