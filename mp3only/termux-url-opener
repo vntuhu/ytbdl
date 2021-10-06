@@ -1,1 +1,1 @@
-
+youtube-dl -f bestaudio -x --audio-format mp4 --audio-quality 0 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $1
