@@ -1,15 +1,15 @@
 url=$1
 echo "if download speed is slow please exit and re-download"
-echo "1) M4A only most popular on youtube"
-echo "2) Download highest Audio/Best conver to MP3"
-echo "3) Merge highest Video+Audio if not available download Best"
-echo "4) Download Best - Best = Highest file include Video and Audio"
-echo "40) Download Best ≥1080p"
-echo "41) Download Best ≤1080p"
-echo "42) Download Best ≤720p"
-echo "21) Download highest Audio/Best convert to MP3 Keep source file"
-echo "m4a) M4A MODE - TYPE: bash update.sh"
-echo "mp3) MP3 MODE - back to normal mode"
+echo "1) M4A Only - Most popular on youtube, may not available"
+echo "2) MP3 - Convert Audio/Video to MP3"
+echo "3) Video Merge - Highest quality on youtube up to 4k"
+echo "4) Video - Detect best video to watch"
+echo "5) Video - Height ≥1080p"
+echo "6) Video - Height ≤1080p"
+echo "7) MP3 - Keep source after convert"
+echo "8) AUDIO ONLY - Auto select highest quality"
+echo "9) M4A MODE - TYPE: bash update.sh"
+echo "0) MP3 MODE - back to normal mode"
 echo "x) Exit"
 read CHOICE
 case $CHOICE in
@@ -18,21 +18,21 @@ youtube-dl -f 'bestaudio[ext=m4a]' -o "/data/data/com.termux/files/home/storage/
 2)
 youtube-dl -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
 3)
-youtube-dl -f 'bestvideo+bestaudio/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/av%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestvideo+bestaudio/best[height<=2160]' -o "/data/data/com.termux/files/home/storage/shared/Movies/av%(title)s.%(ext)s" $url;;
 4)
 youtube-dl -f 'best' -o "/data/data/com.termux/files/home/storage/shared/Movies/b-%(title)s.%(ext)s" $url;;
-40)
+5)
 youtube-dl -f 'best[height>=1080]' -o "/data/data/com.termux/files/home/storage/shared/Movies/1080+%(title)s.%(ext)s" $url;;
-41)
+6)
 youtube-dl -f 'best[height<=1080]' -o "/data/data/com.termux/files/home/storage/shared/Movies/1080-%(title)s.%(ext)s" $url;;
-42)
-youtube-dl -f 'best[height<=720]' -o "/data/data/com.termux/files/home/storage/shared/Movies/720-%(title)s.%(ext)s" $url;;
-21)
+7)
 youtube-dl -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -k -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
-m4a)
+8)
+youtube-dl -f 'bestaudio' -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+9)
 rm -r /data/data/com.termux/files/home/bin/termux-url-opener
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/m4aonly/termux-url-opener -P /data/data/com.termux/files/home/bin | youtube-dl -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
-mp3)
+0)
 rm -r /data/data/com.termux/files/home/bin/termux-url-opener
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/mp3only/termux-url-opener -P /data/data/com.termux/files/home/bin | youtube-dl -f 'bestaudio' -x --audio-format mp3 --audio-quality 0 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
 x)
