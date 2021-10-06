@@ -18,15 +18,15 @@ youtube-dl -f 'bestaudio[ext=m4a]' -o "/data/data/com.termux/files/home/storage/
 2)
 youtube-dl -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
 3)
-youtube-dl -f 'bestvideo+bestaudio/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestvideo+bestaudio/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/av%(title)s.%(ext)s" $url;;
 4)
-youtube-dl -f 'best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'best' -o "/data/data/com.termux/files/home/storage/shared/Movies/b-%(title)s.%(ext)s" $url;;
 40)
-youtube-dl -f 'best[height>=1080' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'best[height>=1080]' -o "/data/data/com.termux/files/home/storage/shared/Movies/1080+%(title)s.%(ext)s" $url;;
 41)
-youtube-dl -f 'best[height<=1080' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'best[height<=1080]' -o "/data/data/com.termux/files/home/storage/shared/Movies/1080-%(title)s.%(ext)s" $url;;
 42)
-youtube-dl -f 'best[height<=720' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'best[height<=720]' -o "/data/data/com.termux/files/home/storage/shared/Movies/720-%(title)s.%(ext)s" $url;;
 21)
 youtube-dl -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -k -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
 m4a)
