@@ -1,2 +1,2 @@
 url=$1
-youtube-dl -f bestaudio -x --audio-format mp3 --audio-quality 0 -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url
+youtube-dl -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url
