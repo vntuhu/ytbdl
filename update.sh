@@ -4,6 +4,6 @@ rm -r /data/data/com.termux/files/home/.config/youtube-dl/config
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/com.termux/files/home/.config/youtube-dl
 rm -r /data/data/com.termux/files/home/install.sh
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/install.sh -P /data/data/com.termux/files/home/
-rm -r /data/data/com.termux/files/home/install.sh
+rm -r /data/data/com.termux/files/home/update.sh
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/update.sh -P /data/data/com.termux/files/home/
 echo "Done..."
