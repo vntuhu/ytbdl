@@ -1,0 +1,44 @@
+# Colors
+# ----------------------------------------
+BL='\e[01;90m' > /dev/null 2>&1; # Black
+R='\e[01;91m' > /dev/null 2>&1; # Red
+G='\e[01;92m' > /dev/null 2>&1; # Green
+Y='\e[01;93m' > /dev/null 2>&1; # Yellow
+B='\e[01;94m' > /dev/null 2>&1; # Blue
+P='\e[01;95m' > /dev/null 2>&1; # Purple
+C='\e[01;96m' > /dev/null 2>&1; # Cyan
+W='\e[01;97m' > /dev/null 2>&1; # White
+LG='\e[01;37m' > /dev/null 2>&1; # Light Gray
+N='\e[0m' > /dev/null 2>&1; # Null
+L='\033[7m' > /dev/null 2>&1; #Lines
+X='\033[0m' > /dev/null 2>&1; #Closer
+# ----------------------------------------
+url=$1
+echo -e $B $L"if download speed is slow please exit and re-download" $N
+echo -e $B $L"1) Audio-only (m4a)" $N
+echo -e $B $L"2) Audio-only (mp3)" $N
+echo -e $B $L"3) Best MVideo (mp4,mkv)" $N
+echo -e $B $L"4) Best MVideo (mp4)" $N
+echo -e $B $L"5) MVideo (mp4) ≤1080p" $N
+echo -e $B $L"6) MVideo (mp4) ≤720p" $N
+echo -e $B $L"7) Best Audio-only (m4a,webm)" $N
+echo -e $B $L"8) Thank to VNTuhu" $N
+read CHOICE
+case $CHOICE in
+1)
+youtube-dl -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+2)
+youtube-dl -f 'bestaudio' -x --audio-format mp3 --audio-quality 0 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+3)
+youtube-dl -f 'bestvideo+bestaudio/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+4)
+youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+5)
+youtube-dl -f 'bestvideo[ext=mp4][height<=1080]+bestaudio[ext=m4a]/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+6)
+youtube-dl -f 'bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+7)
+youtube-dl -f bestaudio -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+8)
+exit;;
+esac
