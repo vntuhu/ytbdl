@@ -9,6 +9,7 @@ echo "6) MVideo MP4 ≤720p"
 echo "7) Best Mvideo + Video + Audio"
 echo "8) Download and switch to MP3 only mode"
 echo "9) Download and switch to M4A only mode "
+echo "0) Video info
 read CHOICE
 case $CHOICE in
 1)
