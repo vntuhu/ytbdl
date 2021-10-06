@@ -14,7 +14,7 @@ L='\033[7m' > /dev/null 2>&1; #Lines
 X='\033[0m' > /dev/null 2>&1; #Closer
 # ----------------------------------------
 url=$1
-echo -e $B $L"if download speed is slow please exit and re-download" $N
+echo -e $B "if download speed is slow please exit and re-download" $N
 echo "1) Audio-only (m4a)"
 echo "2) Audio-only (mp3)"
 echo "3) Best MVideo (mp4,mkv)"
