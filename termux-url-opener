@@ -4,6 +4,7 @@ echo "1) M4A only most popular on youtube"
 echo "2) Download highest Audio/Best conver to MP3"
 echo "3) Merge highest Video+Audio if not available download Best"
 echo "4) Download Best - Best = Highest file include Video and Audio"
+echo "40) Download Best ≥1080p"
 echo "41) Download Best ≤1080p"
 echo "42) Download Best ≤720p"
 echo "21) Download highest Audio/Best convert to MP3 Keep source file"
@@ -20,6 +21,8 @@ youtube-dl -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "/data
 youtube-dl -f 'bestvideo+bestaudio/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 4)
 youtube-dl -f 'best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+40)
+youtube-dl -f 'best[height>=1080' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 41)
 youtube-dl -f 'best[height<=1080' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 42)
