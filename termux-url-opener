@@ -1,31 +1,12 @@
-
-#!/system/bin/sh
-
-# Colors
-# ----------------------------------------
-BL='\e[01;90m' > /dev/null 2>&1; # Black
-R='\e[01;91m' > /dev/null 2>&1; # Red
-G='\e[01;92m' > /dev/null 2>&1; # Green
-Y='\e[01;93m' > /dev/null 2>&1; # Yellow
-B='\e[01;94m' > /dev/null 2>&1; # Blue
-P='\e[01;95m' > /dev/null 2>&1; # Purple
-C='\e[01;96m' > /dev/null 2>&1; # Cyan
-W='\e[01;97m' > /dev/null 2>&1; # White
-LG='\e[01;37m' > /dev/null 2>&1; # Light Gray
-N='\e[0m' > /dev/null 2>&1; # Null
-L='\033[7m' > /dev/null 2>&1; #Lines
-X='\033[0m' > /dev/null 2>&1; #Closer
-# ----------------------------------------
-echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
 url=$1
-echo "if download speed is slow please exit and re-download" $N
-echo "1) Audio-only (m4a)"
-echo "2) Audio-only (mp3)"
-echo "3) Best MVideo (mp4,mkv)"
-echo "4) Best MVideo (mp4)"
-echo "5) MVideo (mp4) ≤1080p"
-echo "6) MVideo (mp4) ≤720p"
-echo "7) Best Audio-only (m4a,webm)"
+echo "if download speed is slow please exit and re-download"
+echo "1) M4A"
+echo "2) MP3"
+echo "3) Best MVideo MKV,MP4"
+echo "4) Best MVideo MP4"
+echo "5) MVideo MP4 ≤1080p"
+echo "6) MVideo MP4 ≤720p"
+echo "7) Best Mvideo + Video + Audio"
 echo "8) Thank to VNTuhu"
 read CHOICE
 case $CHOICE in
@@ -34,15 +15,15 @@ youtube-dl -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/sh
 2)
 youtube-dl -f 'bestaudio' -x --audio-format mp3 --audio-quality 0 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
 3)
-youtube-dl -f 'bestvideo+bestaudio/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestvideo+bestaudio' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 4)
-youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 5)
-youtube-dl -f 'bestvideo[ext=mp4][height<=1080]+bestaudio[ext=m4a]/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestvideo[ext=mp4][height<=1080]+bestaudio[ext=m4a]' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 6)
-youtube-dl -f 'bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]/best' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 7)
-youtube-dl -f bestaudio -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestvideo+bestaudio' -k -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 8)
 exit;;
 esac
