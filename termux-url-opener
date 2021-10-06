@@ -32,7 +32,6 @@ wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/mp3only/termux-url-open
 9)
 rm -r /data/data/com.termux/files/home/bin/termux-url-opener
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/m4aonly/termux-url-opener -P /data/data/com.termux/files/home/bin;;
-youtube-dl -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
 0)
 youtube-dl - F $url | sleep 10;;
 esac
