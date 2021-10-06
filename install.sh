@@ -19,64 +19,61 @@ X='\033[0m' > /dev/null 2>&1; #Closer
 apt update -y
 clear
 
+echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
 
-echo -e $R"__   __          _         _          ____  _" $N
-sleep 0.3
-echo -e $R"\ \ / /__  _   _| |_ _   _| |__   ___|  _ \| |" $N
-sleep 0.3
-echo -e $R" \ V / _ \| | | | __| | | | '_ \ / _ \ | | | |" $N
-sleep 0.3
-echo -e $R"  | | (_) | |_| | |_| |_| | |_) |  __/ |_| | |___" $N
-sleep 0.3
-echo -e $R"  |_|\___/ \__,_|\__|\__,_|_.__/ \___|____/|_____|" $N
-
-sleep 1.5
-
-echo -e $Y $L"YouTube-dl Installer By"  $R "VNTuhu" $N
-
-echo -e $Y $L"Installing python..." $N
+echo -e $B $L"Installing python..." $N
 
 		pkg install python -y
 		clear
 
-echo -e $Y $L"Installing ffmpeg..." $N
+echo -e $B $L"Installing ffmpeg..." $N
 
 		apt install ffmpeg -y
 		apt update -y
 		clear
 
-echo -e $Y $L"Installing wget..." $N
+echo -e $B $L"Installing wget..." $N
 
 		pkg install wget -y
 
-echo -e $Y $L"Installing YouTube-dl..." $N 
+echo -e $B $L"Installing YouTube-dl..." $N 
 
 		pip install youtube-dl
 		clear
 
-echo -e $Y $L"Setting up configs..." $N
+echo -e $B $L"Setting up configs..." $N
 sleep 2
 
-echo -e $Y $L "Creating Youtube folder..." $N
+echo -e $B $L "Creating Youtube folder..." $N
 		mkdir /data/data/com.termux/files/home/storage/shared/Youtube
+echo -e $B $L "Creating Music folder..." $N
+		mkdir /data/data/com.termux/files/home/storage/shared/Music
+echo -e $B $L "Creating Movies folder..." $N
+		mkdir /data/data/com.termux/files/home/storage/shared/Movies
 sleep 1.5
 
-echo -e $Y $L "Creating youtube-dl config..." $N
+echo -e $B $L "Creating youtube-dl config folder..." $N
 		mkdir -p ~/.config/youtube-dl
 sleep 1.5
 
-echo -e $Y $L "Getting config file..." $N
+echo -e $B $L "Clean old config file..." $N
+rm -r /data/data/com.termux/files/home/.config/youtube-dl/config
+
+echo -e $B $L "Getting config file..." $N
 		wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/com.termux/files/home/.config/youtube-dl
 
-echo -e $Y $L "Creating bin folder..." $N
+echo -e $B $L "Creating bin folder..." $N
 		mkdir ~/bin
 sleep 1.5
 
-echo -e $Y $L "Getting files..." $N
+echo -e $B $L "Clean old termux-url-opener file..." $N
+rm -r /data/data/com.termux/files/home/bin/termux-url-opener
+
+echo -e $B $L "Getting termux-url-opener files..." $N
 		wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/termux-url-opener -P /data/data/com.termux/files/home/bin
 		clear
 		
-echo -e $Y $L "Finishing configuration..." $N
+echo -e $B $L "Finishing configuration..." $N
 sleep 5
 
 echo -e $G"Installation Finished..." $N
