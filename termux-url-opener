@@ -13,7 +13,7 @@ case $CHOICE in
 1)
 youtube-dl -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
 2)
-youtube-dl -f 'bestaudio' -x --audio-format mp3 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+youtube-dl -f bestaudio -x --audio-format mp3 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
 3)
 youtube-dl -f 'bestvideo+bestaudio' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 4)
