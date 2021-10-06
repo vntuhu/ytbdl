@@ -75,6 +75,7 @@ echo -e $B $L "Getting termux-url-opener files..." $N
 		wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/termux-url-opener -P /data/data/com.termux/files/home/bin
 sleep 1.5
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/update.sh -P /data/data/com.termux/files/home
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/install.sh -P /data/data/com.termux/files/home
 		clear
 		
 echo -e $B $L "Finishing configuration..." $N
