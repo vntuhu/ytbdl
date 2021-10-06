@@ -8,6 +8,7 @@ echo "5) MVideo MP4 ≤1080p"
 echo "6) MVideo MP4 ≤720p"
 echo "7) MP3 AUTO MODE"
 echo "8) M4A AUTO MODE"
+echo "x) Exit"
 read CHOICE
 case $CHOICE in
 1)
@@ -24,8 +25,10 @@ youtube-dl -f 'bestvideo[ext=mp4][height<=1080]+bestaudio[ext=m4a]' -o "/data/da
 youtube-dl -f 'bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]' -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 7)
 rm -r /data/data/com.termux/files/home/bin/termux-url-opener
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/mp3only/termux-url-opener -P /data/data/com.termux/files/home/bin;;
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/mp3only/termux-url-opener -P /data/data/com.termux/files/home/bin | youtube-dl -f 'bestaudio' -x --audio-format mp3 --audio-quality 0 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
 8)
 rm -r /data/data/com.termux/files/home/bin/termux-url-opener
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/m4aonly/termux-url-opener -P /data/data/com.termux/files/home/bin;;
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/m4aonly/termux-url-opener -P /data/data/com.termux/files/home/bin | youtube-dl -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+x)
+exit;;
 esac
