@@ -7,8 +7,8 @@ echo "4) Best MVideo MP4"
 echo "5) MVideo MP4 ≤1080p"
 echo "6) MVideo MP4 ≤720p"
 echo "7) Best Mvideo + Video + Audio"
-echo "8) Switch to MP3 only mode"
-echo "9) Thank to VNTuhu"
+echo "8) Download and switch to MP3 only mode"
+echo "9) Download and switch to M4A only mode "
 read CHOICE
 case $CHOICE in
 1)
@@ -26,8 +26,14 @@ youtube-dl -f 'bestvideo[ext=mp4][height<=720]+bestaudio[ext=m4a]' -o "/data/dat
 7)
 youtube-dl -f 'bestvideo+bestaudio' -k -o "/data/data/com.termux/files/home/storage/shared/Movies/%(title)s.%(ext)s" $url;;
 8)
+youtube-dl -f bestaudio -x --audio-format mp3 --audio-quality 0 -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
 rm -r /data/data/com.termux/files/home/bin/termux-url-opener
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/mp3only/termux-url-opener -P /data/data/com.termux/files/home/bin;;
 9)
-exit;;
+rm -r /data/data/com.termux/files/home/bin/termux-url-opener
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/m4aonly/termux-url-opener -P /data/data/com.termux/files/home/bin;;
+youtube-dl -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+0)
+youtube-dl - F $url;;
+sleep 10
 esac
