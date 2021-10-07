@@ -51,20 +51,9 @@ mkdir -p ~/.config/youtube-dl
 clear
 
 echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
-echo -e $B $L"Remove old file..." $N
-rm -r /data/data/com.termux/files/home/.config/youtube-dl/config
-rm -r /data/data/com.termux/files/home/bin/termux-url-opener
-rm -r /data/data/com.termux/files/home/install.sh
-rm -r /data/data/com.termux/files/home/update.sh
-rm -r /data/data/com.termux/files/usr/bin/ytb
-
-echo -e $B $L "Getting config file..." $N
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/com.termux/files/home/.config/youtube-dl
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/termux-url-opener -P /data/data/com.termux/files/home/bin
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/update.sh -P /data/data/com.termux/files/home
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/install.sh -P /data/data/com.termux/files/home
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/ytb -P /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/ytb
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/updt -P /data/data/com.termux/files/usr/bin/
+chmod +x /data/data/com.termux/files/usr/bin/updt
+updt
 clear
 echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
 echo -e $B $L "Finishing configuration..." $N
