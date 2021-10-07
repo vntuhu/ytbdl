@@ -63,7 +63,7 @@ wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/co
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/termux-url-opener -P /data/data/com.termux/files/home/bin
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/update.sh -P /data/data/com.termux/files/home
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/install.sh -P /data/data/com.termux/files/home
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/ytb -P /data/data/com.termux/files/usr/bin/ytb
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/ytb -P /data/data/com.termux/files/usr/bin
 clear
 echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
 echo -e $B $L "Finishing configuration..." $N
