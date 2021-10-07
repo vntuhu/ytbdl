@@ -8,7 +8,7 @@ echo "5) Video - Height ≥1080p"
 echo "6) Video - Height ≤1080p"
 echo "7) MP3 - Keep source after convert"
 echo "8) AUDIO ONLY - Auto select highest quality"
-echo "9) M4A MODE - TYPE: bash update.sh"
+echo "9) M4A MODE - TYPE: up"
 echo "0) MP3 MODE - back to normal mode"
 echo "x) Exit"
 read CHOICE
