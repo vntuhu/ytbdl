@@ -1,6 +1,6 @@
 --no-mtime
 -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s
 -f "best"
---verbose
+-v
 --no-overwrites
--c
+--restrict-filenames
