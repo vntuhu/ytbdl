@@ -9,5 +9,5 @@ wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/update.sh -P /data/data
 rm -r /data/data/com.termux/files/usr/bin/ytb
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/ytb -P /data/data/com.termux/files/usr/bin/
 chmod +x /data/data/com.termux/files/usr/bin/ytb
-wget https://raw.githubusercontent.com/vntuhu/converter/main/update.sh -P -o /data/data/com.termux/files/home/
+wget https://raw.githubusercontent.com/vntuhu/converter/main/getconv.sh -P -o /data/data/com.termux/files/home/
 echo "Done..."
