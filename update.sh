@@ -8,4 +8,5 @@ rm -r /data/data/com.termux/files/home/update.sh
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/update.sh -P /data/data/com.termux/files/home/
 rm -r /data/data/com.termux/files/usr/bin/ytb
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/ytb -P /data/data/com.termux/files/usr/bin/
+chmod +x /data/data/com.termux/files/usr/bin/ytb
 echo "Done..."
