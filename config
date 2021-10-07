@@ -10,4 +10,4 @@
 --embed-thumbnail  
 --add-metadata
 --xattrs
---external-downloader wget
+--external-downloader httpie
