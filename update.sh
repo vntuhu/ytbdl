@@ -11,4 +11,8 @@ wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/ytb -P /data/data/com.t
 chmod +x /data/data/com.termux/files/usr/bin/ytb
 rm -r /data/data/com.termux/files/home/getconv.sh
 wget https://raw.githubusercontent.com/vntuhu/converter/main/getconv.sh -P /data/data/com.termux/files/home/
+rm -r /data/data/com.termux/files/usr/bin/updt
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/updt -P /data/data/com.termux/files/usr/bin/
+chmod +x /data/data/com.termux/files/usr/bin/updt
+rm -r /data/data/com.termux/files/home/update.sh
 echo "Done..."
