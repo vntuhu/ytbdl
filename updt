@@ -1,21 +1,38 @@
-rm -r /data/data/com.termux/files/home/bin/termux-url-opener
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/termux-url-opener -P /data/data/com.termux/files/home/bin
-rm -r /data/data/com.termux/files/home/.config/youtube-dl/config
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/com.termux/files/home/.config/youtube-dl
-rm -r /data/data/com.termux/files/home/install.sh
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/install.sh -P /data/data/com.termux/files/home/
-rm -r /data/data/com.termux/files/usr/bin/ytb
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/ytb -P /data/data/com.termux/files/usr/bin/
-chmod +x /data/data/com.termux/files/usr/bin/ytb
-rm -r /data/data/com.termux/files/home/getconv.sh
-wget https://raw.githubusercontent.com/vntuhu/converter/main/getconv.sh -P /data/data/com.termux/files/home/
+# update file
 rm -r /data/data/com.termux/files/usr/bin/updt
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/updt -P /data/data/com.termux/files/usr/bin/
 chmod +x /data/data/com.termux/files/usr/bin/updt
+
+# termux-url-opener
+rm -r /data/data/com.termux/files/home/bin/termux-url-opener
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/termux-url-opener -P /data/data/com.termux/files/home/bin
+chmod +x /data/data/com.termux/files/home/bin/termux-url-opener
+
+# ytbdl config
+rm -r /data/data/com.termux/files/home/.config/youtube-dl/config
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/com.termux/files/home/.config/youtube-dl
+
+# ytbdl install file
+rm -r /data/data/com.termux/files/home/install.sh
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/install.sh -P /data/data/com.termux/files/home/
+
+# ytbdl short
+rm -r /data/data/com.termux/files/usr/bin/ytb
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/ytb -P /data/data/com.termux/files/usr/bin/
+chmod +x /data/data/com.termux/files/usr/bin/ytb
+
+# video converter
 rm -r /data/data/com.termux/files/usr/bin/conv
 wget https://raw.githubusercontent.com/vntuhu/converter/main/conv -P /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/conv
+
+# ytbdl option
 rm -r /data/data/com.termux/files/usr/bin/yto
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/yto -P /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/yto
+
+# fast update file
+rm -r /data/data/com.termux/files/usr/bin/up
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/up -P /data/data/com.termux/files/usr/bin/
+chmod +x /data/data/com.termux/files/usr/bin/up
 echo "Done..."
