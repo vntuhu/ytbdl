@@ -1,3 +1,12 @@
 --no-mtime
 -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s
 -f "best"
+--abort-on-unavailable-fragment
+--verbose
+--no-overwrites
+--write-description
+--write-info-json
+--write-annotations
+--embed-subs
+--embed-thumbnail  
+--add-metadata
