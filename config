@@ -1,7 +1,6 @@
 --no-mtime
 -o /data/data/com.termux/files/home/storage/shared/Youtube/%(title)s.%(ext)s
 -f "best"
---abort-on-unavailable-fragment
 --verbose
 --no-overwrites
 --write-description
@@ -11,4 +10,4 @@
 --embed-thumbnail  
 --add-metadata
 --xattrs
---user-agent 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3562.2 Safari/537.36'
+--external-downloader wget
