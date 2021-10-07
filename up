@@ -1,0 +1,5 @@
+# update file
+rm -r /data/data/com.termux/files/usr/bin/updt
+wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/updt -P /data/data/com.termux/files/usr/bin/
+chmod +x /data/data/com.termux/files/usr/bin/updt
+updt
