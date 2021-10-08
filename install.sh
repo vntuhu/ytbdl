@@ -38,24 +38,10 @@ echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
 echo -e $B $L"Installing YouTube-dl..." $N 
 pip install youtube-dl
 clear
-
-echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
-echo -e $B $L"Setting up configs..." $N
-sleep 2
-echo -e $B $L"Creating folder..." $N
-mkdir /data/data/com.termux/files/home/storage/shared/Youtube
-mkdir /data/data/com.termux/files/home/storage/shared/Music/
-mkdir /data/data/com.termux/files/home/storage/shared/Movies/
-mkdir ~/bin
-mkdir -p ~/.config/youtube-dl
-clear
-
 echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/updt -P /data/data/com.termux/files/usr/bin/
 chmod +x /data/data/com.termux/files/usr/bin/updt
 updt
 clear
 echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
-echo -e $B $L "Finishing configuration..." $N
-sleep 5
 echo -e $G"Installation Finished..." $N
