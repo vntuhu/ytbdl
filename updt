@@ -7,10 +7,6 @@ chmod +x /data/data/com.termux/files/home/bin/termux-url-opener
 rm -r /data/data/com.termux/files/home/.config/youtube-dl/config
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/com.termux/files/home/.config/youtube-dl
 
-# ytbdl install file
-rm -r /data/data/com.termux/files/home/install.sh
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/install.sh -P /data/data/com.termux/files/home/
-
 # ytbdl short
 rm -r /data/data/com.termux/files/usr/bin/ytb
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/ytb -P /data/data/com.termux/files/usr/bin/
