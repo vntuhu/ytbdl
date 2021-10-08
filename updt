@@ -5,6 +5,7 @@ wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/termux-url-opener -P /d
 chmod +x /data/data/com.termux/files/home/bin/termux-url-opener
 
 # ytbdl config
+mkdir -p ~/.config/youtube-dl
 rm -r /data/data/com.termux/files/home/.config/youtube-dl/config
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/com.termux/files/home/.config/youtube-dl
 mkdir /data/data/com.termux/files/home/storage/shared/Youtube
