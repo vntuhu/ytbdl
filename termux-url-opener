@@ -14,7 +14,7 @@ L='\033[7m' > /dev/null 2>&1; #Lines
 X='\033[0m' > /dev/null 2>&1; #Closer
 # ----------------------------------------
 url=$1
-echo -e $LG"if download speed is slow please exit and re-download"$N
+echo $LG"if download speed is slow please exit and re-download"
 echo "1) M4A Only - Most popular on youtube, may not available"
 echo "2) MP3 - Convert Audio/Video to MP3"
 echo "3) Video Merge - Highest quality on youtube up to 4k"
