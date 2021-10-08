@@ -1,4 +1,5 @@
 # termux-url-opener
+mkdir ~/bin
 rm -r /data/data/com.termux/files/home/bin/termux-url-opener
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/termux-url-opener -P /data/data/com.termux/files/home/bin
 chmod +x /data/data/com.termux/files/home/bin/termux-url-opener
@@ -6,6 +7,9 @@ chmod +x /data/data/com.termux/files/home/bin/termux-url-opener
 # ytbdl config
 rm -r /data/data/com.termux/files/home/.config/youtube-dl/config
 wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/com.termux/files/home/.config/youtube-dl
+mkdir /data/data/com.termux/files/home/storage/shared/Youtube
+mkdir /data/data/com.termux/files/home/storage/shared/Music/
+mkdir /data/data/com.termux/files/home/storage/shared/Movies/
 
 # ytbdl short
 rm -r /data/data/com.termux/files/usr/bin/ytb
