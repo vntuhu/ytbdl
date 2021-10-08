@@ -16,6 +16,7 @@ chmod +x /data/data/com.termux/files/usr/bin/ytb
 rm -r /data/data/com.termux/files/usr/bin/conv
 wget https://raw.githubusercontent.com/vntuhu/converter/main/conv -P /data/data/com.termux/files/usr/bin
 chmod +x /data/data/com.termux/files/usr/bin/conv
+mkdir /sdcard/conv
 
 # ytbdl option
 rm -r /data/data/com.termux/files/usr/bin/yto
