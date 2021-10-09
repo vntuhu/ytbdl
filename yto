@@ -23,7 +23,7 @@ echo -e $Y "5) Video - Height ≥1080p"$N
 echo -e $P "6) Video - Height ≤1080p"$N
 echo -e $G "7) MP3 - Keep source after convert" $N
 echo -e $W "8) AUDIO ONLY - Auto select highest quality"$N
-echo -e $W "9) M4A MODE - TYPE: up"$N
+echo -e $W "9) M4A MODE - TYPE: updt"$N
 echo -e $W "0) MP3 MODE - back to normal mode"$N
 echo -e $W "i) Video info"$N
 echo -e $W "x) Exit"$N
