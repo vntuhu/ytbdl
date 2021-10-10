@@ -1,32 +1,42 @@
+# rút gọn
+main=https://raw.githubusercontent.com/vntuhu/ytbdl/main
+home=/data/data/com.termux/files/home
+bin=/data/data/com.termux/files/usr/bin
+
 # termux-url-opener
 mkdir ~/bin
-rm -r /data/data/com.termux/files/home/bin/termux-url-opener
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/termux-url-opener -P /data/data/com.termux/files/home/bin
-chmod +x /data/data/com.termux/files/home/bin/termux-url-opener
+rm -r $home/bin/termux-url-opener
+wget $main/termux-url-opener -P $home/bin
+chmod +x $home/bin/termux-url-opener
 
 # ytbdl config
 mkdir -p ~/.config/youtube-dl
-rm -r /data/data/com.termux/files/home/.config/youtube-dl/config
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/config -P /data/data/com.termux/files/home/.config/youtube-dl
-mkdir /data/data/com.termux/files/home/storage/shared/Youtube
-mkdir /data/data/com.termux/files/home/storage/shared/Music/
-mkdir /data/data/com.termux/files/home/storage/shared/Movies/
+rm -r $home/.config/youtube-dl/config
+wget $main/config -P $home/.config/youtube-dl
+mkdir $home/storage/shared/Youtube
+mkdir $home/storage/shared/Music/
+mkdir $home/storage/shared/Movies/
 
 # ytbdl short
-rm -r /data/data/com.termux/files/usr/bin/ytb
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/ytb -P /data/data/com.termux/files/usr/bin/
-chmod +x /data/data/com.termux/files/usr/bin/ytb
+rm -r $bin/ytb
+wget $main/ytb -P $bin/
+chmod +x $bin/ytb
 
 # video converter
-rm -r /data/data/com.termux/files/usr/bin/conv
-wget https://raw.githubusercontent.com/vntuhu/converter/main/conv -P /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/conv
+rm -r $bin/conv
+wget $main/conv -P $bin
+chmod +x $bin/conv
 mkdir /sdcard/conv
 touch /sdcard/conv/this-is-conv-folder
 
+# resize video
+rm -r $bin/resize
+wget $main/resize -P $bin/
+chmod + $bin/reisze
+
 # ytbdl option
-rm -r /data/data/com.termux/files/usr/bin/yto
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/yto -P /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/yto
+rm -r $bin/yto
+wget $main/yto -P $bin
+chmod +x $bin/yto
 
 echo "Done..."
