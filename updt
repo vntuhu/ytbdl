@@ -32,7 +32,7 @@ touch /sdcard/conv/this-is-conv-folder
 # resize video
 rm -r $bin/resize
 wget $main/resize -P $bin/
-chmod + $bin/reisze
+chmod + $bin/resize
 
 # ytbdl option
 rm -r $bin/yto
