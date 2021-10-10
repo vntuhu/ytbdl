@@ -1,0 +1,81 @@
+clear
+cd /sdcard/conv
+ls
+echo "Vui lòng nhét file vào thư mục conv"
+echo "1) MP4 to M4A"
+echo "2) MP4 to MP3"
+echo "3) WEBM to M4A"
+echo "4) WEBM to MP3"
+echo "5) MKV to M4A"
+echo "6) MKV to MP3"
+echo "7) MKV to MP4"
+echo "8) MP4 to MKV"
+echo "x) Quít"
+read CHOICE
+case $CHOICE in
+1)
+echo "Đang tiến hành"
+for v in /sdcard/conv/*.mp4;
+do 
+    ffmpeg -i "$v" -q:a 0 -vn -acodec copy -hide_banner -loglevel error "${v%}".m4a;
+echo "Hoàn thành"
+done;;
+2)
+echo "Đang tiến hành"
+for v in /sdcard/conv/*.mp4;
+do 
+    ffmpeg -i "$v" -q:a 0 -vn -acodec libmp3lame -hide_banner -loglevel error "${v%}".mp3;
+echo "Hoàn thành" 
+done;;
+3)
+echo "Đang tiến hành"
+for v in /sdcard/conv/*.webm;
+do 
+    ffmpeg -i "$v" -q:a0 -acodec libmp3lame -vn -hide_banner -loglevel error "${v%}".m4a;
+echo "Hoàn thành"
+done;;
+4)
+echo "Đang tiến hành"
+for v in /sdcard/conv/*.webm;
+do 
+    ffmpeg -i "$v" -q:a 0 -vn -hide_banner -loglevel error "${v%}".mp3;
+echo "Hoàn thành"
+done;;
+5)
+echo "Đang tiến hành"
+for v in /sdcard/conv/*.mkv;
+do 
+    ffmpeg -i "$v" -q:a 0 -vn -hide_banner -loglevel error "${v%}".m4a;
+echo "Hoàn thành"
+done;;
+6)
+echo "Đang tiến hành"
+for v in /sdcard/conv/*.mkv;
+do 
+    ffmpeg -i "$v" -q:a 0 -vn -c:a libmp3lame -hide_banner -loglevel error "${v%}".mp3;
+echo "Hoàn thành"
+done;;
+7)
+echo "Đang tiến hành"
+for v in /sdcard/conv/*.mkv;
+do 
+    ffmpeg -i "$v" -q:a 0 -hide_banner -loglevel error "${v%}".mp4;
+echo "Hoàn thành"
+done;;
+8)
+echo "Đang tiến hành"
+for v in /sdcard/conv/*.mp4;
+do 
+    ffmpeg -i "$v" -q:a 0 "${v%}".mkv;
+echo "Hoàn thành"
+done;;
+.)
+echo "Đang tiến hành"
+for v in /sdcard/conv/*.m4a;
+do 
+    ffmpeg -i "$v" -q:a 0 -acodec libmp3lame -hide_banner -loglevel error "${v%}".mp3;
+echo "Hoàn thành"
+done;;
+x)
+exit;;
+esac
