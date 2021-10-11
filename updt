@@ -3,6 +3,11 @@ main=https://raw.githubusercontent.com/vntuhu/ytbdl/main
 home=/data/data/com.termux/files/home
 bin=/data/data/com.termux/files/usr/bin
 
+# update
+rm -r $bin/updt
+wget $main/updt -P $bin/
+chmod +x $bin/updt
+
 # termux-url-opener
 mkdir ~/bin
 rm -r $home/bin/termux-url-opener
