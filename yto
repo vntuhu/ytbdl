@@ -1,66 +1,29 @@
-#!/system/bin/sh
-# Colors
-# ----------------------------------------
-BL='\e[01;90m' > /dev/null 2>&1; # Black
-R='\e[01;91m' > /dev/null 2>&1; # Red
-G='\e[01;92m' > /dev/null 2>&1; # Green
-Y='\e[01;93m' > /dev/null 2>&1; # Yellow
-B='\e[01;94m' > /dev/null 2>&1; # Blue
-P='\e[01;95m' > /dev/null 2>&1; # Purple
-C='\e[01;96m' > /dev/null 2>&1; # Cyan
-W='\e[01;97m' > /dev/null 2>&1; # White
-LG='\e[01;37m' > /dev/null 2>&1; # Light Gray
-N='\e[0m' > /dev/null 2>&1; # Null
-L='\033[7m' > /dev/null 2>&1; #Lines
-X='\033[0m' > /dev/null 2>&1; #Closer
-# ----------------------------------------
+sdc=/data/data/com.termux/files/home/storage/shared
 url=$1
-echo -e $Y "1) M4A Only - Most popular on youtube, may not available"$N
-echo -e $G "2) MP3 - Convert Audio/Video to MP3"$N
-echo -e $R "3) Video Merge - Highest quality on youtube up to 4k"$N
-echo -e $B "4) Video - Detect best video to watch" $N
-echo -e $Y "5) Video - Height ≥1080p"$N
-echo -e $P "6) Video - Height ≤1080p"$N
-echo -e $G "7) MP3 - Keep source after convert" $N
-echo -e $W "8) AUDIO ONLY - Auto select highest quality"$N
-echo -e $W "9) M4A MODE - TYPE: updt"$N
-echo -e $W "0) MP3 MODE - back to normal mode"$N
-echo -e $W "i) Video info"$N
-echo -e $W "x) Exit"$N
+echo "1) Merge Video"
+echo "2) HD Video"
+echo "3) M4A"
+echo "4) MP3" 
+echo "8) Audio"
+echo "i) Video info"
+echo "x) Exit"
 read CHOICE
 case $CHOICE in
 1)
 clear
-youtube-dl -f 'bestaudio[ext=m4a]' -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url;;
 2)
 clear
-youtube-dl -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'best' -o "$sdc/shared/Movies/b-%(title)s.%(ext)s" $url;;
 3)
 clear
-youtube-dl -f 'bestvideo+bestaudio/best[height<=2160]' -o "/data/data/com.termux/files/home/storage/shared/Movies/av%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestaudio[ext=m4a]' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 4)
 clear
-youtube-dl -f 'best' -o "/data/data/com.termux/files/home/storage/shared/Movies/b-%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 5)
 clear
-youtube-dl -f 'best[height>=1080]' -o "/data/data/com.termux/files/home/storage/shared/Movies/1080+%(title)s.%(ext)s" $url;;
-6)
-clear
-youtube-dl -f 'best[height<=1080]' -o "/data/data/com.termux/files/home/storage/shared/Movies/1080-%(title)s.%(ext)s" $url;;
-7)
-clear
-youtube-dl -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -k -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
-8)
-clear
-youtube-dl -f 'bestaudio' -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
-9)
-clear
-rm -r /data/data/com.termux/files/home/bin/termux-url-opener
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/m4aonly/termux-url-opener -P /data/data/com.termux/files/home/bin | youtube-dl -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
-0)
-clear
-rm -r /data/data/com.termux/files/home/bin/termux-url-opener
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/mp3only/termux-url-opener -P /data/data/com.termux/files/home/bin | youtube-dl -f 'bestaudio' -x --audio-format mp3 --audio-quality 0 -o "data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $url;;
+youtube-dl -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 i)
 clear
 youtube-dl -F -v $url
