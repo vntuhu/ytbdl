@@ -1,47 +1,41 @@
-#!/system/bin/sh
+# rút gọn
+main=https://raw.githubusercontent.com/vntuhu/ytbdl/main
+home=/data/data/com.termux/files/home
+bin=/data/data/com.termux/files/usr/bin
 
-# Colors
-# ----------------------------------------
-BL='\e[01;90m' > /dev/null 2>&1; # Black
-R='\e[01;91m' > /dev/null 2>&1; # Red
-G='\e[01;92m' > /dev/null 2>&1; # Green
-Y='\e[01;93m' > /dev/null 2>&1; # Yellow
-B='\e[01;94m' > /dev/null 2>&1; # Blue
-P='\e[01;95m' > /dev/null 2>&1; # Purple
-C='\e[01;96m' > /dev/null 2>&1; # Cyan
-W='\e[01;97m' > /dev/null 2>&1; # White
-LG='\e[01;37m' > /dev/null 2>&1; # Light Gray
-N='\e[0m' > /dev/null 2>&1; # Null
-L='\033[7m' > /dev/null 2>&1; #Lines
-X='\033[0m' > /dev/null 2>&1; #Closer
-# ----------------------------------------
-echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
+echo "YouTube-dl Installer ByVNTuhu"
 apt update -y
 clear
 
-echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
-echo -e $B $L"Installing python..." $N
+echo "YouTube-dl Installer ByVNTuhu"
+echo "Installing python..." 
 pkg install python -y
 clear
 
-echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
-echo -e $B $L"Installing ffmpeg..." $N
+echo "YouTube-dl Installer ByVNTuhu"
+echo "Installing ffmpeg..." 
 apt install ffmpeg -y
 apt update -y
 clear
 
-echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
-echo -e $B $L"Installing wget..." $N
+echo "YouTube-dl Installer ByVNTuhu"
+echo "Installing wget..." 
 pkg install wget -y
 clear
-echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
-echo -e $B $L"Installing YouTube-dl..." $N 
+echo "YouTube-dl Installer ByVNTuhu"
+echo "Installing YouTube-dl..."  
 pip install youtube-dl
 clear
-echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
-wget https://raw.githubusercontent.com/vntuhu/ytbdl/main/updt -P /data/data/com.termux/files/usr/bin/
-chmod +x /data/data/com.termux/files/usr/bin/updt
+echo "YouTube-dl Installer ByVNTuhu"
+
+# mkdir
+mkdir ~/bin
+mkdir -p ~/.config/youtube-dl
+mkdir $home/storage/shared/Youtube
+mkdir $home/storage/shared/Music/
+mkdir $home/storage/shared/Movies/
+wget $main/updt -P $bin
+chmod +x $bin/updt
 updt
 clear
-echo -e $B $L"YouTube-dl Installer By"  $R "VNTuhu" $N
-echo -e $G"Installation Finished..." $N
+echo "Installation Finished..." 
