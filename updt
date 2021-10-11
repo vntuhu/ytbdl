@@ -9,18 +9,13 @@ wget $main/updt -P $bin/
 chmod +x $bin/updt
 
 # termux-url-opener
-mkdir ~/bin
 rm -r $home/bin/termux-url-opener
 wget $main/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
 
 # ytbdl config
-mkdir -p ~/.config/youtube-dl
 rm -r $home/.config/youtube-dl/config
 wget $main/config -P $home/.config/youtube-dl
-mkdir $home/storage/shared/Youtube
-mkdir $home/storage/shared/Music/
-mkdir $home/storage/shared/Movies/
 
 # ytbdl short
 rm -r $bin/ytb
@@ -31,8 +26,6 @@ chmod +x $bin/ytb
 rm -r $bin/conv
 wget $main/conv -P $bin
 chmod +x $bin/conv
-mkdir /sdcard/conv
-touch /sdcard/conv/this-is-conv-folder
 
 # resize video
 rm -r $bin/resize
