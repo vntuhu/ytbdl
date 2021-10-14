@@ -8,6 +8,7 @@ echo "7) 480 ngang h264"
 echo "8) 480 ngang h265"
 echo "9) 480 dọc h264"
 echo "0) 480 dọc h265"
+echo "ns) Mute
 echo "x) Exit"
 read CHOICE
 case $CHOICE in
@@ -34,6 +35,8 @@ ffmpeg -i $1 -c:v libx265 -c:a copy -vf scale=854x480 $2 $3 h265-480p-$1;;
 ffmpeg -i $1 -c:v h264 -c:a copy -vf scale=480x854 $2 $3 h264-480p-$1;;
 0)
 ffmpeg -i $1 -c:v libx265 -c:a copy -vf scale=480x854 $2 $3 h265-480p-$1;;
+0)
+ffmpeg -i $1 -c:v copy -an $2 $3 mute-$1;;
 x)
 exit;;
 esac
