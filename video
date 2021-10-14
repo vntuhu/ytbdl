@@ -12,6 +12,9 @@ echo "ns) Mute"
 echo "m4a) Tách M4A"
 echo "mp3) Tách MP3"
 echo "img) IMG"
+echo "merge) Merging video and audio, with audio re-encoding"
+echo "megerw) Copying the audio without re-encoding"
+echo "merger) Replacing audio stream"
 echo "x) Exit"
 read CHOICE
 case $CHOICE in
@@ -46,6 +49,13 @@ mp3)
 ffmpeg -i $1 -vn -q:a 0 $2 $3 $1.mp3;;
 img)
 ffmpeg -i $1 -ss $2 -vframes 1 -q:v 2 $3 $1.jpg;;
+#Merging video and audio, with audio re-encoding
+merge)
+ffmpeg -i $1 -i $2 -c:v copy -c:a aac merge-$1+$2.mp4;;
+mergew)
+ffmpeg -i $1 -i $2 -c copy mergew-$1+$2.mkv;;
+merger)
+ffmpeg -i $1 -i $2 -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 merger-$1+$2.mp4;;
 x)
 exit;;
 esac
