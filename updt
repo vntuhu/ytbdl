@@ -23,14 +23,13 @@ wget $main/ytb -P $bin/
 chmod +x $bin/ytb
 
 # video converter
-rm -r $bin/conv
-wget $main/conv -P $bin
-chmod +x $bin/conv
+rm -r $bin/video
+wget $main/video -P $bin
+chmod +x $bin/video
 
 # resize video
 rm -r $bin/resize
-wget $main/resize -P $bin/
-chmod +x $bin/resize
+rm -r $bin/conv
 
 # ytbdl option
 rm -r $bin/yto
