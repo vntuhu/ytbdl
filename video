@@ -13,7 +13,7 @@ echo "m4a) Tách M4A"
 echo "mp3) Tách MP3"
 echo "img) IMG"
 echo "merge) Merging video and audio, with audio re-encoding"
-echo "megerw) Copying the audio without re-encoding"
+echo "megew) Copying the audio without re-encoding"
 echo "merger) Replacing audio stream"
 echo "x) Exit"
 read CHOICE
