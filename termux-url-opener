@@ -11,22 +11,22 @@ read CHOICE
 case $CHOICE in
 1)
 clear
-youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url;;
+ytb -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url;;
 2)
 clear
-youtube-dl -f 'best' -o "$sdc/shared/Movies/b-%(title)s.%(ext)s" $url;;
+ytb -f 'best' -o "$sdc/shared/Movies/b-%(title)s.%(ext)s" $url;;
 3)
 clear
-youtube-dl -f 'bestaudio[ext=m4a]' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+ytb -f 'bestaudio[ext=m4a]' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 4)
 clear
-youtube-dl -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+ytb -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 5)
 clear
-youtube-dl -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+ytb -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 i)
 clear
-youtube-dl -F -v $url
+ytb -F -v $url
 sleep;;
 x)
 exit;;
