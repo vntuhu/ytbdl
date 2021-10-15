@@ -17,11 +17,6 @@ chmod +x $home/bin/termux-url-opener
 rm -r $home/yt-dlp.conf
 wget $main/yt-dlp.conf -P $home/yt-dlp.conf
 
-# ytbdl short
-rm -r $bin/ytb
-wget $main/ytb -P $bin/
-chmod +x $bin/ytb
-
 # video converter
 rm -r $bin/video
 wget $main/video -P $bin
