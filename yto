@@ -11,22 +11,22 @@ read CHOICE
 case $CHOICE in
 1)
 clear
-ytb -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url;;
 2)
 clear
-ytb -f 'best' -o "$sdc/shared/Movies/b-%(title)s.%(ext)s" $url;;
+yt-dlp -f 'best' -o "$sdc/shared/Movies/b-%(title)s.%(ext)s" $url;;
 3)
 clear
-ytb -f 'bestaudio[ext=m4a]' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 4)
 clear
-ytb -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 5)
 clear
-ytb -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 i)
 clear
-ytb -F -v $url
+yt-dlp -F -v $url
 sleep;;
 x)
 exit;;
