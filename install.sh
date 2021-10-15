@@ -23,14 +23,17 @@ echo "Installing wget..."
 pkg install wget -y
 clear
 echo "YouTube-dl Installer ByVNTuhu"
-echo "Installing YouTube-dl..."  
-pip install youtube-dl
+echo "Installing git..." 
+pkg install git -y
+clear
+echo "YouTube-dl Installer ByVNTuhu"
+echo "Installing yt-dlp..."  
+python3 -m pip install --upgrade git+https://github.com/yt-dlp/yt-dlp.git@release
 clear
 echo "YouTube-dl Installer ByVNTuhu"
 
 # mkdir
 mkdir ~/bin
-mkdir -p ~/.config/youtube-dl
 mkdir $home/storage/shared/Youtube
 mkdir $home/storage/shared/Music/
 mkdir $home/storage/shared/Movies/
