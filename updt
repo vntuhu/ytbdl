@@ -15,7 +15,7 @@ chmod +x $home/bin/termux-url-opener
 
 # yt-dlp config
 rm -r $home/yt-dlp.conf
-wget $main/yt-dlp.conf -P $home/yt-dlp.conf
+wget $main/yt-dlp.conf -P $home
 
 # video converter
 rm -r $bin/video
