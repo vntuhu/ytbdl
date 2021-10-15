@@ -29,6 +29,8 @@ clear
 echo "YouTube-dl Installer ByVNTuhu"
 echo "Installing yt-dlp..."  
 python3 -m pip install --upgrade git+https://github.com/yt-dlp/yt-dlp.git@release
+wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O $bin/yt-dlp
+chmod a+rx $bin/yt-dlp
 clear
 echo "YouTube-dl Installer ByVNTuhu"
 
