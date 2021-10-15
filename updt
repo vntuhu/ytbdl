@@ -34,5 +34,5 @@ wget $main/sdat2img.py -P $bin
 wget $main/img2sdat.py -P $bin
 chmod +x $bin/sdat2img.py
 chmod +x $bin/img2sdat.py
-
+termux-fix-shebang $PREFIX/bin/yt-dlp
 echo "Done..."
