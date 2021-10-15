@@ -13,9 +13,9 @@ rm -r $home/bin/termux-url-opener
 wget $main/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
 
-# ytbdl config
-rm -r $home/.config/youtube-dl/config
-wget $main/config -P $home/.config/youtube-dl
+# yt-dlp config
+rm -r $home/yt-dlp.conf
+wget $main/yt-dlp.conf -P $home/yt-dlp.conf
 
 # ytbdl short
 rm -r $bin/ytb
@@ -26,10 +26,6 @@ chmod +x $bin/ytb
 rm -r $bin/video
 wget $main/video -P $bin
 chmod +x $bin/video
-
-# resize video
-rm -r $bin/resize
-rm -r $bin/conv
 
 # ytbdl option
 rm -r $bin/yto
