@@ -1,3 +1,6 @@
+main=https://raw.githubusercontent.com/vntuhu/ytbdl/main
+home=/data/data/com.termux/files/home
+bin=/data/data/com.termux/files/usr/bin
 sdc=/data/data/com.termux/files/home/storage/shared
 url=$1
 echo "1) Merge Video"
@@ -30,4 +33,22 @@ yt-dlp -F -v $url
 sleep;;
 x)
 exit;;
+video)
+clear
+rm -r $home/bin/termux-url-opener
+wget $main/video/termux-url-opener -P $home/bin
+chmod +x $home/bin/termux-url-opener
+yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url;;
+m4a)
+clear
+rm -r $home/bin/termux-url-opener
+wget $main/video/termux-url-opener -P $home/bin
+chmod +x $home/bin/termux-url-opener
+yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+mp3)
+clear
+rm -r $home/bin/termux-url-opener
+wget $main/video/termux-url-opener -P $home/bin
+chmod +x $home/bin/termux-url-opener
+yt-dlp -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 esac
