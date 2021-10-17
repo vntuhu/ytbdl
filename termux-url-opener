@@ -52,8 +52,9 @@ rm -r $home/bin/termux-url-opener
 wget $main/mp3only/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
 yt-dlp -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "$sdc/Music/%(title)s.%(ext)s" $url;;
-audio)rm -r $home/bin/termux-url-opener
-wget $main/mp3only/termux-url-opener -P $home/bin
+audio)
+rm -r $home/bin/termux-url-opener
+wget $main/audioonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
 yt-dlp -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 esac
