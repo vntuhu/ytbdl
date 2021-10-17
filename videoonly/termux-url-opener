@@ -1,0 +1,6 @@
+main=https://raw.githubusercontent.com/vntuhu/ytbdl/main
+home=/data/data/com.termux/files/home
+bin=/data/data/com.termux/files/usr/bin
+sdc=/data/data/com.termux/files/home/storage/shared
+yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url
+sleep
