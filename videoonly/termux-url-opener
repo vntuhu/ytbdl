@@ -4,5 +4,5 @@ bin=/data/data/com.termux/files/usr/bin
 sdc=/data/data/com.termux/files/home/storage/shared
 yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $1
 echo "Đã download vào thư mục /sdcard/Movies"
-echo "để trở về chế độ thường mở termux gõ updt"
+echo "Để trở về chế độ thường mở termux gõ updt"
 sleep
