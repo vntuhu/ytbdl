@@ -10,7 +10,7 @@ echo "4) MP3"
 echo "8) Audio"
 echo "i) Video info"
 echo "x) Exit"
-echo "video, m4a, mp3) Fast download mode"
+echo "video, m4a, mp3, audio) Fast download mode"
 read CHOICE
 case $CHOICE in
 1)
@@ -52,4 +52,8 @@ rm -r $home/bin/termux-url-opener
 wget $main/mp3only/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
 yt-dlp -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+audio)rm -r $home/bin/termux-url-opener
+wget $main/mp3only/termux-url-opener -P $home/bin
+chmod +x $home/bin/termux-url-opener
+yt-dlp -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 esac
