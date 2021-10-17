@@ -10,6 +10,7 @@ echo "4) MP3"
 echo "8) Audio"
 echo "i) Video info"
 echo "x) Exit"
+echo "video, m4a, mp3) Fast download mode"
 read CHOICE
 case $CHOICE in
 1)
