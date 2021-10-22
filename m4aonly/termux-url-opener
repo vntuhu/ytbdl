@@ -1,5 +1,1 @@
-main=https://raw.githubusercontent.com/vntuhu/ytbdl/main
-home=/data/data/com.termux/files/home
-bin=/data/data/com.termux/files/usr/bin
-sdc=/data/data/com.termux/files/home/storage/shared
-yt-dlp -f bestaudio[ext=m4a] -o "$sdc/Music/%(title)s.%(ext)s" $1
+yt-dlp -f bestaudio[ext=m4a] -o "/data/data/com.termux/files/home/storage/shared/Music/%(title)s.%(ext)s" $1
