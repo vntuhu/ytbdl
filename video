@@ -15,6 +15,7 @@ echo "img) IMG"
 echo "merge) Merging video and audio, with audio re-encoding"
 echo "mergew) Copying the audio without re-encoding"
 echo "merger) Replacing audio stream"
+echo "mp4) Convert to mp4"
 echo "x) Exit"
 read CHOICE
 case $CHOICE in
@@ -56,6 +57,8 @@ mergew)
 ffmpeg -i $1 -i $2 -c copy mergew-$1+$2.mkv;;
 merger)
 ffmpeg -i $1 -i $2 -c:v copy -c:a aac -map 0:v:0 -map 1:a:0 merger-$1+$2.mp4;;
+mp4)
+ffmpeg -i $1 -c:v libx264 -c:a aac -pix_fmt yuv420p mp4-$1.mp4;;
 x)
 exit;;
 esac
