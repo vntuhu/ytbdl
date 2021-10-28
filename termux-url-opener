@@ -3,14 +3,12 @@ home=/data/data/com.termux/files/home
 bin=/data/data/com.termux/files/usr/bin
 sdc=/data/data/com.termux/files/home/storage/shared
 url=$1
-echo "1) Merge Video"
-echo "2) HD Video"
+echo "1) Video"
+echo "2) MP4 Video"
 echo "3) M4A"
-echo "4) MP3" 
-echo "8) Audio"
+echo "4) Audio"
 echo "i) Video info"
 echo "x) Exit"
-echo "video, m4a, mp3, audio) Fast download mode"
 read CHOICE
 case $CHOICE in
 1)
@@ -24,14 +22,11 @@ clear
 yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 4)
 clear
-yt-dlp -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "$sdc/Music/%(title)s.%(ext)s" $url;;
-5)
-clear
 yt-dlp -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 i)
 clear
 yt-dlp -F -v $url
-sleep;;
+yto $url;;
 x)
 exit;;
 video)
@@ -46,12 +41,6 @@ rm -r $home/bin/termux-url-opener
 wget $main/m4aonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
 yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
-mp3)
-clear
-rm -r $home/bin/termux-url-opener
-wget $main/mp3only/termux-url-opener -P $home/bin
-chmod +x $home/bin/termux-url-opener
-yt-dlp -f 'bestaudio/best' -x --audio-format mp3 --audio-quality 0 -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 audio)
 rm -r $home/bin/termux-url-opener
 wget $main/audioonly/termux-url-opener -P $home/bin
