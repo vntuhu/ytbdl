@@ -12,13 +12,17 @@ echo "x) Exit"
 read CHOICE
 case $CHOICE in
 1)
-yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av-%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av-%(title)s.%(ext)s" $url
+yto $url;;
 2)
-yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/mp4-%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/mp4-%(title)s.%(ext)s" $url
+yto $url;;
 3)
-yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/m4a-%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/m4a-%(title)s.%(ext)s" $url
+yto $url;;
 4)
-yt-dlp -f 'bestaudio' -o "$sdc/Music/audio-%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio' -o "$sdc/Music/audio-%(title)s.%(ext)s" $url
+yto $url;;
 x)
 exit;;
 video)
