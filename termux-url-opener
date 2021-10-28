@@ -12,9 +12,9 @@ echo "x) Exit"
 read CHOICE
 case $CHOICE in
 1)
-yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av-%(title)s.%(ext)s" $url;;
 2)
-yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/mp4%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/mp4-%(title)s.%(ext)s" $url;;
 3)
 yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/m4a-%(title)s.%(ext)s" $url;;
 4)
@@ -26,22 +26,22 @@ clear
 rm -r $home/bin/termux-url-opener
 wget $main/videoonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
-yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av-%(title)s.%(ext)s" $url;;
 mp4)
 clear
 rm -r $home/bin/termux-url-opener
 wget $main/mp4/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
-yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/mp4%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/mp4-%(title)s.%(ext)s" $url;;
 m4a)
 clear
 rm -r $home/bin/termux-url-opener
 wget $main/m4aonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
-yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/m4a-%(title)s.%(ext)s" $url;;
 audio)
 rm -r $home/bin/termux-url-opener
 wget $main/audioonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
-yt-dlp -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio' -o "$sdc/Music/audio-%(title)s.%(ext)s" $url;;
 esac
