@@ -3,7 +3,6 @@ home=/data/data/com.termux/files/home
 bin=/data/data/com.termux/files/usr/bin
 sdc=/data/data/com.termux/files/home/storage/shared
 url=$1
-echo "%(title)s"
 yt-dlp -F $url
 echo "1) Video"
 echo "2) MP4 Video"
