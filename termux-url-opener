@@ -25,7 +25,7 @@ clear
 yt-dlp -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
 i)
 clear
-yt-dlp -F -v $url
+yt-dlp -F $url
 yto $url;;
 x)
 exit;;
