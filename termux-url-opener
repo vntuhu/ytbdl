@@ -3,31 +3,23 @@ home=/data/data/com.termux/files/home
 bin=/data/data/com.termux/files/usr/bin
 sdc=/data/data/com.termux/files/home/storage/shared
 url=$1
+echo "%(title)s"
 yt-dlp -F $url
 echo "1) Video"
 echo "2) MP4 Video"
 echo "3) M4A"
 echo "4) Audio"
-echo "i) Video info"
 echo "x) Exit"
 read CHOICE
 case $CHOICE in
 1)
-clear
 yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url;;
 2)
-clear
 yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/mp4%(title)s.%(ext)s" $url;;
 3)
-clear
-yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/m4a-%(title)s.%(ext)s" $url;;
 4)
-clear
-yt-dlp -f 'bestaudio' -o "$sdc/Music/%(title)s.%(ext)s" $url;;
-i)
-clear
-yt-dlp -F $url
-yto $url;;
+yt-dlp -f 'bestaudio' -o "$sdc/Music/audio-%(title)s.%(ext)s" $url;;
 x)
 exit;;
 video)
@@ -36,6 +28,12 @@ rm -r $home/bin/termux-url-opener
 wget $main/videoonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
 yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/av%(title)s.%(ext)s" $url;;
+mp4)
+clear
+rm -r $home/bin/termux-url-opener
+wget $main/mp4/termux-url-opener -P $home/bin
+chmod +x $home/bin/termux-url-opener
+yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/Movies/mp4%(title)s.%(ext)s" $url;;
 m4a)
 clear
 rm -r $home/bin/termux-url-opener
