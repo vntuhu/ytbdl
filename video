@@ -8,6 +8,7 @@ echo "img) IMG"
 echo "merge) Video + AAC (MP4)"
 echo "mergew) Video + Audio (MKV)"
 echo "mp4) Convert to mp4"
+echo "fix) Fix video"
 echo "x) Exit"
 read CHOICE
 case $CHOICE in
@@ -42,6 +43,9 @@ ffmpeg -i $1 -i $2 -c copy mergew-$1+$2.mkv;;
 
 mp4)
 ffmpeg -i $1 -c:v libx264 -c:a aac -pix_fmt yuv420p mp4-$1.mp4;;
+
+fix)
+ffmpeg -y -i $1 -c:v libx264 -c:a aac -strict experimental -tune fastdecode -pix_fmt yuv420p fix-$1;;
 
 x)
 exit;;
