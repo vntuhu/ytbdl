@@ -7,6 +7,7 @@ echo "1) Video"
 echo "2) MP4 Video"
 echo "3) M4A"
 echo "4) Audio"
+echo "i) Info"
 echo "x) Exit"
 read CHOICE
 case $CHOICE in
@@ -21,6 +22,9 @@ yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/Music/m4a-%(title)s.%(ext)s" $url
 yto $url;;
 4)
 yt-dlp -f 'bestaudio' -o "$sdc/Music/audio-%(title)s.%(ext)s" $url
+yto $url;;
+i)
+yt-dlp -F $url
 yto $url;;
 x)
 exit;;
