@@ -38,9 +38,6 @@ echo "YouTube-dl Installer By VNTuhu"
 
 # mkdir
 mkdir ~/bin
-mkdir $home/storage/shared/Youtube
-mkdir $home/storage/shared/Music/
-mkdir $home/storage/shared/Movies/
 wget $main/updt -P $bin
 chmod +x $bin/updt
 updt
