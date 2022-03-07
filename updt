@@ -27,5 +27,7 @@ rm -r $bin/yto
 wget $main/yto -P $bin
 chmod +x $bin/yto
 
+# update yt-dlp
+yt-dlp -U
 termux-fix-shebang $PREFIX/bin/yt-dlp
 echo "Done..."
