@@ -1,1 +1,1 @@
-yt-dlp -f bestaudio -o "/data/data/com.termux/files/home/storage/shared/Music/audio-%(title)s.%(ext)s $1
+yt-dlp -f bestaudio -o "/data/data/com.termux/files/home/storage/shared/yt-dlp/audio-%(title)s.%(ext)s $1
