@@ -20,7 +20,7 @@ yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/ytdlp/m4a-%(title)s.%(ext)s" $url;;
 4)
 yt-dlp -f 'bestaudio' -o "$sdc/ytdlp/audio-%(title)s.%(ext)s" $url;;
 i)
-ytdlp -F $url
+yt-dlp -F $url
 yto $url;;
 x)
 exit;;
