@@ -15,7 +15,7 @@ yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp
 2)
 yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/yt-dlp/mp4-%(title)s.%(ext)s" $url;;
 3)
-yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/yt-dlp/m4a-%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/yt-dlp/m4a-%(title)s.%(ext)s" --sponsorblock-remove all $url;;
 4)
 yt-dlp -f 'bestaudio' -o "$sdc/yt-dlp/audio-%(title)s.%(ext)s" $url;;
 x)
