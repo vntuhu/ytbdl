@@ -5,7 +5,6 @@ sdc=/data/data/com.termux/files/home/storage/shared
 url=$1
 echo "1) MP4/MKV-video"
 echo "2) M4A/MP3-audio"
-echo "3) Disable Sponsor Block"
 echo "i) Info"
 echo "x) Exit"
 read CHOICE
