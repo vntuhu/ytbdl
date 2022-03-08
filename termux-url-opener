@@ -16,7 +16,7 @@ yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp
 2)
 yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/ytdlp/mp4-%(title)s.%(ext)s" $url;;
 3)
-yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/ytdlp/m4a-%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/ytdlp/m4a-%(title)s.%(ext)s" --sponsorblock-remove all $url;;
 4)
 yt-dlp -f 'bestaudio' -o "$sdc/ytdlp/audio-%(title)s.%(ext)s" $url;;
 i)
@@ -41,7 +41,7 @@ clear
 rm -r $home/bin/termux-url-opener
 wget $main/m4aonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
-yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/ytdlp/m4a-%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/ytdlp/m4a-%(title)s.%(ext)s" --sponsorblock-remove all $url;;
 audio)
 rm -r $home/bin/termux-url-opener
 wget $main/audioonly/termux-url-opener -P $home/bin
