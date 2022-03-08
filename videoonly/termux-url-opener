@@ -1,1 +1,1 @@
-yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "/data/data/com.termux/files/home/storage/shared/ytdlp/av-%(title)s.%(ext)s" $1
+yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/bestvideo+bestaudio/best' -o "$sdc/ytdlp/av-%(title)s.%(ext)s" $1
