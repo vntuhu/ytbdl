@@ -21,13 +21,13 @@ exit;;
 video)
 clear
 rm -r $home/bin/termux-url-opener
-wget $main/video/termux-url-opener -P $home/bin
+wget $main/videoonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
 yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/bestvideo+bestaudio/best' -o "$sdc/ytdlp/av-%(title)s.%(ext)s" $url;;
 audio)
 clear
 rm -r $home/bin/termux-url-opener
-wget $main/video/termux-url-opener -P $home/bin
+wget $main/audioonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
 yt-dlp -f 'bestaudio[ext=m4a]/bestaudio[ext=mp3]/bestaudio' -o "$sdc/ytdlp/a-%(title)s.%(ext)s" --sponsorblock-remove all $url;;
 esac
