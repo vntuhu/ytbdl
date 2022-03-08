@@ -3,21 +3,15 @@ home=/data/data/com.termux/files/home
 bin=/data/data/com.termux/files/usr/bin
 sdc=/data/data/com.termux/files/home/storage/shared
 url=$1
-echo "1) Video"
-echo "2) MP4 Video"
-echo "3) M4A"
-echo "4) Audio"
+echo "1) MP4/MKV-video"
+echo "2) M4A/MP3-audio"
 echo "x) Exit"
 read CHOICE
 case $CHOICE in
 1)
-yt-dlp -f 'bestvideo+bestaudio/bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/yt-dlp/av-%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/bestvideo+bestaudio/best' -o "$sdc/ytdlp/av-%(title)s.%(ext)s" $url;;
 2)
-yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' -o "$sdc/yt-dlp/mp4-%(title)s.%(ext)s" $url;;
-3)
-yt-dlp -f 'bestaudio[ext=m4a]' -o "$sdc/yt-dlp/m4a-%(title)s.%(ext)s" --sponsorblock-remove all $url;;
-4)
-yt-dlp -f 'bestaudio' -o "$sdc/yt-dlp/audio-%(title)s.%(ext)s" $url;;
+yt-dlp -f 'bestaudio[ext=m4a]/bestaudio[ext=mp3]/bestaudio' -o "$sdc/ytdlp/a-%(title)s.%(ext)s" --sponsorblock-remove all $url;;
 x)
 exit;;
 esac
