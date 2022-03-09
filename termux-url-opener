@@ -10,7 +10,7 @@ echo "x) Exit"
 read CHOICE
 case $CHOICE in
 1)
-yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/bestvideo+bestaudio/best' -o "$sdc/ytdlp/av-%(title)s.%(ext)s" $url;;
+yt-dlp $url;;
 2)
 yt-dlp -f 'bestaudio[ext=m4a]/bestaudio[ext=mp3]/bestaudio' -o "$sdc/ytdlp/a-%(title)s.%(ext)s" --sponsorblock-remove all $url;;
 i)
@@ -23,7 +23,7 @@ clear
 rm -r $home/bin/termux-url-opener
 wget $main/videoonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
-yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/bestvideo+bestaudio/best' -o "$sdc/ytdlp/av-%(title)s.%(ext)s" $url;;
+yt-dlp $url;;
 audio)
 clear
 rm -r $home/bin/termux-url-opener
