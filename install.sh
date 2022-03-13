@@ -9,22 +9,21 @@ clear
 
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing python..." 
-pkg install python -y
+apt install python -y
 clear
 
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing ffmpeg..." 
 apt install ffmpeg -y
-apt update -y
 clear
 
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing wget..." 
-pkg install wget -y
+apt install wget -y
 clear
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing git..." 
-pkg install git -y
+apt install git -y
 clear
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing yt-dlp..."  
