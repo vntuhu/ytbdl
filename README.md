@@ -7,10 +7,6 @@ https://f-droid.org/en/packages/com.termux/
 
 Lệnh cài đặt:
 ```
-curl -s -L http://yt-dlp.cf | bash
-```
-Hoặc
-```
 curl -s -L https://raw.githubusercontent.com/vntuhu/ytbdl/main/install.sh | bash
 ```
 
