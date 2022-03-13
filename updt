@@ -27,6 +27,11 @@ rm -r $bin/yto
 wget $main/yto -P $bin
 chmod +x $bin/yto
 
+# yt-dlp config
+rm -r $home/cookies.txt
+wget $main/cookies.txt -P $home
+
+
 # update yt-dlp
 yt-dlp -U
 termux-fix-shebang $PREFIX/bin/yt-dlp
