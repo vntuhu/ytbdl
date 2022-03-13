@@ -17,6 +17,10 @@ chmod +x $home/bin/termux-url-opener
 rm -r $home/yt-dlp.conf
 wget $main/yt-dlp.conf -P $home
 
+# .netrc
+rm -r $home/.netrc
+wget $main/.netrc -P $home
+
 # video converter
 rm -r $bin/video
 wget $main/video -P $bin
