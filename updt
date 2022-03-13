@@ -20,6 +20,7 @@ wget $main/yt-dlp.conf -P $home
 # .netrc
 rm -r $home/.netrc
 wget $main/.netrc -P $home
+chmod a-rwx,u+rw .netrc
 
 # video converter
 rm -r $bin/video
