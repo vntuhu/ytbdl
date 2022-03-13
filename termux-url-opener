@@ -12,7 +12,7 @@ case $CHOICE in
 1)
 yt-dlp $url;;
 2)
-yt-dlp -f 'bestaudio[ext=m4a]/bestaudio[ext=mp3]/bestaudio' -o "$sdc/ytdlp/a-%(title)s.%(ext)s" --sponsorblock-remove all $url;;
+yt-dlp -f 'bestaudio[ext=m4a]/bestaudio[ext=mp3]/bestaudio' -o "$sdc/ytdlp/%(title)s.%(ext)s" --sponsorblock-remove all $url;;
 i)
 yt-dlp -F $url
 yto $url;;
@@ -29,5 +29,5 @@ clear
 rm -r $home/bin/termux-url-opener
 wget $main/audioonly/termux-url-opener -P $home/bin
 chmod +x $home/bin/termux-url-opener
-yt-dlp -f 'bestaudio[ext=m4a]/bestaudio[ext=mp3]/bestaudio' -o "$sdc/ytdlp/a-%(title)s.%(ext)s" --sponsorblock-remove all $url;;
+yt-dlp -f 'bestaudio[ext=m4a]/bestaudio[ext=mp3]/bestaudio' -o "$sdc/ytdlp/%(title)s.%(ext)s" --sponsorblock-remove all $url;;
 esac
