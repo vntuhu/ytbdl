@@ -21,16 +21,19 @@ echo "yt-dlp Installer By VNTuhu"
 echo "Installing wget..." 
 apt install wget -y
 clear
+
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing git..." 
 apt install git -y
 clear
+
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing yt-dlp..."  
 python3 -m pip install --upgrade git+https://github.com/yt-dlp/yt-dlp.git@release
 wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O $bin/yt-dlp
 chmod a+rx $bin/yt-dlp
 clear
+
 echo "yt-dlp Installer By VNTuhu"
 
 # mkdir
