@@ -4,27 +4,27 @@ bin=/data/data/com.termux/files/usr/bin
 
 echo "yt-dlp Installer By VNTuhu"
 termux-setup-storage
-apt update -y
+pkg update -y
 clear
 
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing python..." 
-apt install python -y
+pkg install python -y
 clear
 
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing ffmpeg..." 
-apt install ffmpeg -y
+pkg install ffmpeg -y
 clear
 
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing wget..." 
-apt install wget -y
+pkg install wget -y
 clear
 
 echo "yt-dlp Installer By VNTuhu"
 echo "Installing git..." 
-apt install git -y
+pkg install git -y
 clear
 
 echo "yt-dlp Installer By VNTuhu"
