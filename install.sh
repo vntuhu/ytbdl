@@ -4,7 +4,6 @@ bin=/data/data/com.termux/files/usr/bin
 
 echo "yt-dlp Installer By VNTuhu"
 termux-setup-storage
-pkg update -y
 pkg install python -y
 pkg install ffmpeg -y
 pkg install wget -y
