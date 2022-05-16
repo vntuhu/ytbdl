@@ -7,7 +7,7 @@ https://f-droid.org/en/packages/com.termux/
 
 Lệnh cài đặt:
 ```
-pkg upgrade
+pkg upgrade -y
 ```
 ```
 curl -s -L https://raw.githubusercontent.com/vntuhu/ytbdl/main/install.sh | bash
