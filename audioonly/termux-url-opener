@@ -1,1 +1,1 @@
-yt-dlp -f 'bestaudio[ext=m4a]/bestaudio[ext=mp3]/bestaudio' -o "/data/data/com.termux/files/home/storage/shared/ytdlp/%(title)s.%(ext)s" --sponsorblock-remove all $1
+yt-dlp -f 'bestaudio[ext=m4a]/bestaudio[ext=mp3]/bestaudio' -o "/data/data/com.termux/files/home/storage/shared/ytdlp/%(title)s.%(ext)s" $1
